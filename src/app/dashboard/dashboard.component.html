@@ -1,0 +1,78 @@
+<body style="background-color: lightblue">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 text-center" style="margin-top: 1rem">
+        <h1 class="text-center">DASHBOARD</h1>
+      </div>
+    </div>
+    <div class="row d-flex" style="justify-content: space-around">
+      <div class="col-lg-6 d-flex ml-5 mt-3">
+        <div class="card border-left-secondary shadow mr-5 h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-uppercase mb-1">
+                  Total no. of Links
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  {{ totalLinks }}
+                </div>
+              </div>
+              <div class="col-auto ml-3 mr-2">
+                <i
+                  class="fa fa-link fa-2x text-gray-300"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card border-left-secondary shadow ml-5 h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-uppercase mb-1">
+                  Total no. of Clicks
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  {{ totalClicks }}
+                </div>
+              </div>
+              <div class="col-auto ml-5 mr-2">
+                <i
+                  class="fa fa-mouse-pointer fa-2x text-gray-300"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row d-flex"
+      style="justify-content: space-around; margin-top: 2rem"
+    >
+      <div class="col-lg-8"
+        style="padding-top: 2rem; text-align: center; background-color: white"
+      >
+        <h1 style="padding-bottom: 2rem">Links Overview</h1>
+        <ngx-charts-bar-vertical
+          [view]="view"
+          [results]="chartData"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+        >
+        </ngx-charts-bar-vertical>
+      </div>
+      
+      
+    </div>
+  </div>
+</body>
